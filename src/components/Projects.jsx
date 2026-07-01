@@ -24,7 +24,7 @@ export default function Projects() {
       title: "Password Management & Notes Application",
       description: "A highly utility-focused personal security application engineered to store credentials and private encrypted text entries securely. Uses robust server-side scripting validation principles to ensure strong security profiles, database shielding, and instant credential lookup features.",
       tags: ["PHP", "SQL", "Relational Databases", "Application Security"],
-      codeLink: "https://github.com/Shekharkumar07/Password-Manager-and-Notes-Application",
+      codeLink: "https://github.com/Shekharkumar07/Password-Management-and-Notes-Application",
       demoLink: "https://tellmepass.infinityfreeapp.com/?i=1"
     },
     {
