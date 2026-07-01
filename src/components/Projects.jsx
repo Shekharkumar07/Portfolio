@@ -2,7 +2,6 @@ import React from "react";
 import { FaExternalLinkAlt, FaGithub, FaFolderOpen } from "react-icons/fa";
 
 export default function Projects() {
-  // Curated project dataset with your real live URLs and GitHub repository structures
   const projectsData = [
     {
       id: 1,
@@ -18,7 +17,7 @@ export default function Projects() {
       description: "An enterprise-grade asset tracking ecosystem created by seamlessly unifying a modular backend service framework with an intuitive graphical user interface. Provides automated workflows for book tracking, inventory updates, membership logging, and automated return parameters.",
       tags: ["JavaScript", "HTML", "CSS", "Backend API Integration", "Databases"],
       codeLink: "https://github.com/Shekharkumar07/Library-Management-System-Frontend",
-      demoLink: "https://shekhar-library-management-system-netlify.app/"
+      demoLink: "https://shekhar-library-management-system.netlify.app/"
     },
     {
       id: 3,
