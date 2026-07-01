@@ -64,45 +64,71 @@ export default function Hero() {
           </p>
 
           {/* ================= SOCIAL LINKS & TECH ================= */}
-          <div className="flex flex-col md:flex-row md:justify-between gap-8 mb-8">
-            <div>
-              <h3 className="font-semibold mb-3">Available On</h3>
-              <div className="flex space-x-5 text-3xl">
-                <a
-                  href="https://www.linkedin.com/in/shekharkumar14"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-blue-600 transition"
-                >
-                  <FaLinkedin />
-                </a>
-                <a
-                  href="https://github.com/Shekharkumar07"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-black transition"
-                >
-                  <FaGithub />
-                </a>
-                <a
-                  href="https://leetcode.com/u/Shekhar_kumar12345/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-yellow-500 transition"
-                >
-                  <SiLeetcode />
-                </a>
-                <a
-                  href="https://www.instagram.com/shekhar_prasad07/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-pink-500 transition"
-                >
-                  <FaInstagram />
-                </a>
-              </div>
-            </div>
+        {/* ================= SOCIAL LINKS & TECH ================= */}
+<div className="flex flex-col md:flex-row md:justify-between gap-8 mb-8">
+  
+  {/* Left: Social Media Links */}
+  <div>
+    <h3 className="font-semibold mb-3 text-gray-800">Available On</h3>
+    <div className="flex space-x-5 text-3xl text-gray-700">
+      <a
+        href="https://www.linkedin.com/in/shekharkumar14"
+        target="_blank"
+        rel="noreferrer"
+        className="hover:text-blue-600 transition"
+      >
+        <FaLinkedin />
+      </a>
+      <a
+        href="https://github.com/Shekharkumar07"
+        target="_blank"
+        rel="noreferrer"
+        className="hover:text-black transition"
+      >
+        <FaGithub />
+      </a>
+      <a
+        href="https://leetcode.com/u/Shekhar_kumar12345/"
+        target="_blank"
+        rel="noreferrer"
+        className="hover:text-yellow-500 transition"
+      >
+        <SiLeetcode />
+      </a>
+      <a
+        href="https://www.instagram.com/shekhar_prasad07/"
+        target="_blank"
+        rel="noreferrer"
+        className="hover:text-pink-500 transition"
+      >
+        <FaInstagram />
+      </a>
+    </div>
+  </div>
 
+  {/* Right: Tech Stack Wrapper */}
+  <div className="flex flex-col">
+    <h3 className="font-semibold mb-3 text-gray-800">Tech Stack</h3>
+    <div className="flex space-x-4 items-center">
+      <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+        <FaJava className="text-red-600 text-3xl" />
+      </div>
+      <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+        <SiSpring className="text-green-600 text-3xl" />
+      </div>
+      <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+        <FaJsSquare className="text-yellow-500 text-3xl" />
+      </div>
+      <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+        <SiMysql className="text-blue-600 text-3xl" />
+      </div>
+      <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+        <FaGitAlt className="text-orange-600 text-3xl" />
+      </div>
+    </div>
+  </div>
+
+</div>
             {/* ================= TECH ICONS ================= */}
             <div className="flex space-x-4 items-center">
               <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
