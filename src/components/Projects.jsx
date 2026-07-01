@@ -1,40 +1,40 @@
 import React from "react";
-import { FaCode, FaExternalLinkAlt, FaGithub, FaFolderOpen } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaFolderOpen } from "react-icons/fa";
 
 export default function Projects() {
-  // Curated project dataset built directly from your repositories in image_c940c0.png
+  // Curated project dataset with your real live URLs and GitHub repository structures
   const projectsData = [
     {
       id: 1,
       title: "Student Management System",
       description: "A complete full-stack web application designed to handle administrative operations. Built with a robust Spring Boot backend to serve operational data over APIs, coupled with a responsive UI. Implements full secure CRUD capabilities to dynamically add, view, update, and manage student lifecycle documentation efficiently.",
       tags: ["Java", "Spring Boot", "JavaScript", "REST APIs", "SQL"],
-      codeLink: "https://github.com/your-username/Student-Management-System", // Replace with your actual GitHub URL
-      demoLink: "#" // Add live deployment link if available, otherwise leave as "#"
+      codeLink: "https://github.com/Shekharkumar07/Student-Management-System",
+      demoLink: "https://student-management-system-liard-nine.vercel.app/"
     },
     {
       id: 2,
       title: "Library Management System",
       description: "An enterprise-grade asset tracking ecosystem created by seamlessly unifying a modular backend service framework with an intuitive graphical user interface. Provides automated workflows for book tracking, inventory updates, membership logging, and automated return parameters.",
       tags: ["JavaScript", "HTML", "CSS", "Backend API Integration", "Databases"],
-      codeLink: "https://github.com/your-username/Library-Management-System-Backend", // Replace with your actual link
-      demoLink: "#"
+      codeLink: "https://github.com/Shekharkumar07/Library-Management-System-Frontend",
+      demoLink: "https://shekhar-library-management-system-netlify.app/"
     },
     {
       id: 3,
       title: "Password Management & Notes Application",
       description: "A highly utility-focused personal security application engineered to store credentials and private encrypted text entries securely. Uses robust server-side scripting validation principles to ensure strong security profiles, database shielding, and instant credential lookup features.",
       tags: ["PHP", "SQL", "Relational Databases", "Application Security"],
-      codeLink: "https://github.com/your-username/Password-Management-and-Notes-Application", // Replace with your actual link
-      demoLink: "#"
+      codeLink: "https://github.com/Shekharkumar07/Password-Manager-and-Notes-Application",
+      demoLink: "https://tellmepass.infinityfreeapp.com/?i=1"
     },
     {
       id: 4,
       title: "Newfotome Platform",
       description: "A specialized rich media asset handling application utilizing fast scripting engines to deliver responsive browser interactions. Focused on high-performance execution speed, sleek frontend interface components, and asynchronous layout scalability.",
       tags: ["JavaScript", "Modern UI", "Frontend Engine"],
-      codeLink: "https://github.com/your-username/newfotome", // Replace with your actual link
-      demoLink: "#"
+      codeLink: "https://github.com/Shekharkumar07/newfotome",
+      demoLink: "https://newfotome.vercel.app/"
     }
   ];
 
@@ -58,7 +58,7 @@ export default function Projects() {
           {projectsData.map((project) => (
             <div 
               key={project.id} 
-              className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between transition-all duration-300"
+              className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-md"
             >
               <div>
                 {/* Decorative Icon Title Group */}
@@ -102,16 +102,14 @@ export default function Projects() {
                     <FaGithub /> Source Code
                   </a>
                   
-                  {project.demoLink !== "#" && (
-                    <a 
-                      href={project.demoLink}
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 bg-green-600 text-white text-xs font-bold px-4 py-2.5 rounded-xl hover:bg-green-700 transition shadow-xs"
-                    >
-                      <FaExternalLinkAlt className="text-[10px]" /> Live Demo
-                    </a>
-                  )}
+                  <a 
+                    href={project.demoLink}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 bg-green-600 text-white text-xs font-bold px-4 py-2.5 rounded-xl hover:bg-green-700 transition shadow-xs"
+                  >
+                    <FaExternalLinkAlt className="text-[10px]" /> Live Demo
+                  </a>
                 </div>
               </div>
 
