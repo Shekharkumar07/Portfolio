@@ -34,22 +34,23 @@ export default function Hero() {
             Welcome to My Portfolio 👋
           </p>
 
-          <h1 className="text-5xl font-bold mb-4 leading-tight">
-            I am{" "}
-            <span className="text-red-600">
-              <ReactTyped
-                strings={[
-                  "Java Full Stack Developer",
-                  "Spring Boot Developer",
-                  "Backend Engineer",
-                ]}
-                typeSpeed={80}
-                backSpeed={50}
-                backDelay={1500}
-                loop
-              />
-            </span>
-          </h1>
+         {/* Keeps "I am" and your typing effect locked on one line forever */}
+<h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 flex items-center gap-x-2 overflow-hidden whitespace-nowrap">
+  <span>I am</span>{" "}
+  <span className="text-red-600 block truncate">
+    <ReactTyped
+      strings={[
+        "Java Full Stack Developer",
+        "Spring Boot Developer",
+        "Backend Engineer",
+      ]}
+      typeSpeed={80}
+      backSpeed={50}
+      backDelay={1500}
+      loop
+    />
+  </span>
+</h1>
 
           <p className="text-gray-700 mb-8 leading-relaxed">
             Passionate and detail-oriented Java Full Stack Developer with
