@@ -124,205 +124,75 @@ export default function Hero() {
 
             {/* ================= TECH ICONS ================= */}
 
-            <div>
+            <div className="flex space-x-4">
 
-              <h3 className="font-semibold mb-3">
-                Technical Skills
-              </h3>
+  <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+    <FaJava className="text-red-600 text-3xl" />
+  </div>
 
-              <div className="grid grid-cols-4 gap-4">
+  <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+    <SiSpring className="text-green-600 text-3xl" />
+  </div>
 
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <FaJava className="text-red-600 text-2xl" />
-                </div>
+  <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+    <FaReact className="text-blue-500 text-3xl" />
+  </div>
 
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <FaReact className="text-blue-500 text-2xl" />
-                </div>
+  <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+    <SiMysql className="text-blue-600 text-3xl" />
+  </div>
 
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <FaJsSquare className="text-yellow-500 text-2xl" />
-                </div>
+  <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+    <FaGitAlt className="text-orange-600 text-3xl" />
+  </div>
 
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <FaPython className="text-blue-600 text-2xl" />
-                </div>
-
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <FaHtml5 className="text-orange-500 text-2xl" />
-                </div>
-
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <FaCss3Alt className="text-blue-500 text-2xl" />
-                </div>
-
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <SiSpring className="text-green-600 text-2xl" />
-                </div>
-
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <SiHibernate className="text-yellow-700 text-2xl" />
-                </div>
-
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <SiMysql className="text-blue-600 text-2xl" />
-                </div>
-
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <SiMongodb className="text-green-700 text-2xl" />
-                </div>
-
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <FaGitAlt className="text-orange-600 text-2xl" />
-                </div>
-
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <FaGithub className="text-black text-2xl" />
-                </div>
-
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <SiPostman className="text-orange-500 text-2xl" />
-                </div>
-
-                <div className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                  <SiJira className="text-blue-500 text-2xl" />
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
+</div>
           
                     {/* ================= SKILLS ================= */}
 
-          <div>
-            <h3 className="font-semibold mb-3">
-              Skills
-            </h3>
+         <div className="flex flex-wrap gap-3">
 
-            <div className="flex flex-wrap gap-3">
+  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-red-600 hover:text-white transition">
+    Core Java
+  </span>
 
-              {/* Programming Languages */}
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-red-600 hover:text-white transition">
-                Core Java
-              </span>
+  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-red-700 hover:text-white transition">
+    Spring Boot
+  </span>
 
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-red-600 hover:text-white transition">
-                Advanced Java
-              </span>
+  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-yellow-600 hover:text-white transition">
+    Hibernate
+  </span>
 
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-yellow-500 hover:text-white transition">
-                JavaScript
-              </span>
+  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-cyan-600 hover:text-white transition">
+    React.js
+  </span>
 
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-blue-600 hover:text-white transition">
-                Basic Python
-              </span>
+  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-yellow-500 hover:text-white transition">
+    JavaScript
+  </span>
 
-              {/* Frontend */}
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-orange-500 hover:text-white transition">
-                HTML
-              </span>
+  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-blue-700 hover:text-white transition">
+    MySQL
+  </span>
 
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-blue-500 hover:text-white transition">
-                CSS
-              </span>
+  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-purple-600 hover:text-white transition">
+    REST APIs
+  </span>
 
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-cyan-600 hover:text-white transition">
-                React.js
-              </span>
+  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-indigo-600 hover:text-white transition">
+    JWT Authentication
+  </span>
 
-              {/* Backend */}
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-green-600 hover:text-white transition">
-                Spring
-              </span>
+  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-orange-600 hover:text-white transition">
+    Git & GitHub
+  </span>
 
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-green-700 hover:text-white transition">
-                Spring Boot
-              </span>
+  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-green-700 hover:text-white transition">
+    OOPs
+  </span>
 
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-yellow-700 hover:text-white transition">
-                Hibernate
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-purple-600 hover:text-white transition">
-                REST APIs
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-indigo-600 hover:text-white transition">
-                JWT Authentication
-              </span>
-
-              {/* Database */}
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-blue-700 hover:text-white transition">
-                MySQL
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-green-700 hover:text-white transition">
-                MongoDB
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-gray-700 hover:text-white transition">
-                SQL
-              </span>
-
-              {/* Version Control */}
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-orange-600 hover:text-white transition">
-                Git
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-black hover:text-white transition">
-                GitHub
-              </span>
-
-              {/* Tools */}
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-orange-500 hover:text-white transition">
-                Postman
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-blue-600 hover:text-white transition">
-                Jira
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-green-600 hover:text-white transition">
-                Eclipse IDE
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-violet-600 hover:text-white transition">
-                IntelliJ IDEA
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-sky-600 hover:text-white transition">
-                VS Code
-              </span>
-
-              {/* Concepts */}
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-teal-600 hover:text-white transition">
-                OOPs
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-pink-600 hover:text-white transition">
-                SDLC
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-red-500 hover:text-white transition">
-                Data Structures
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-purple-500 hover:text-white transition">
-                Algorithms
-              </span>
-
-              <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-cyan-700 hover:text-white transition">
-                Logical Programming
-              </span>
-
-            </div>
-          </div>
-
-        </div>
-
+</div>
         {/* ================= RIGHT IMAGE ================= */}
 
         <div className="flex justify-center">
