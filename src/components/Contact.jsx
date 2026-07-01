@@ -4,7 +4,8 @@ import {
   FaLinkedin, 
   FaGithub, 
   FaMapMarkerAlt, 
-  FaPaperPlane 
+  FaPaperPlane,
+  FaSpinner
 } from "react-icons/fa";
 
 export default function Contact() {
@@ -13,6 +14,7 @@ export default function Contact() {
     email: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -21,12 +23,32 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Connect your favorite backend handler or email service here (e.g., EmailJS, Formspree, or local API)
-    console.log("Form Submitted Successfully:", formData);
-    alert("Thank you for reaching out! I will get back to you as soon as possible.");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      // Sending form data straight to your live Formspree endpoint
+      const response = await fetch("https://formspree.io/f/xojokerq", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Thank you for reaching out! Your message has been sent straight to my inbox.");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Oops! There was a problem submitting your form. Please try again or email me directly.");
+      }
+    } catch (error) {
+      alert("An error occurred. Please check your internet connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -110,7 +132,7 @@ export default function Contact() {
 
           </div>
 
-          {/* RIGHT SIDEBAR: HIGHLY REFINE INTEGRATED FORM (3/5 Width) */}
+          {/* RIGHT SIDEBAR: INTEGRATED FORM (3/5 Width) */}
           <div className="lg:col-span-3 bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-sm">
             <h3 className="text-xl font-bold text-gray-800 tracking-tight mb-6">
               Send an Instant Message
@@ -159,12 +181,21 @@ export default function Contact() {
                 ></textarea>
               </div>
 
-              {/* Submission Button */}
+              {/* Submission Button with dynamic loading state */}
               <button 
                 type="submit"
-                className="w-full mt-2 flex items-center justify-center gap-2 bg-green-600 text-white text-xs font-bold px-6 py-3 rounded-xl hover:bg-green-700 transition shadow-sm tracking-wider uppercase cursor-pointer"
+                disabled={isSubmitting}
+                className="w-full mt-2 flex items-center justify-center gap-2 bg-green-600 text-white text-xs font-bold px-6 py-3 rounded-xl hover:bg-green-700 transition shadow-sm tracking-wider uppercase cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <FaPaperPlane className="text-[10px]" /> Send Message
+                {isSubmitting ? (
+                  <>
+                    <FaSpinner className="animate-spin text-[10px]" /> Sending...
+                  </>
+                ) : (
+                  <>
+                    <FaPaperPlane className="text-[10px]" /> Send Message
+                  </>
+                )}
               </button>
             </form>
           </div>
