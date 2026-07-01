@@ -35,9 +35,9 @@ export default function Hero() {
           </p>
 
          {/* Keeps "I am" and your typing effect locked on one line forever */}
-<h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 flex items-center gap-x-2 overflow-hidden whitespace-nowrap">
-  <span>I am</span>{" "}
-  <span className="text-red-600 block truncate">
+<h1 className="text-[22px] xs:text-2xl sm:text-4xl md:text-5xl font-bold mb-4 flex flex-wrap items-center gap-x-2 whitespace-nowrap overflow-visible">
+  <span>I am</span>
+  <span className="text-red-600 inline-block">
     <ReactTyped
       strings={[
         "Java Full Stack Developer",
