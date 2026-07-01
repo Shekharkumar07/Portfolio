@@ -273,159 +273,74 @@
 
 
 
-
-
 import React from "react";
+import { FaGraduationCap, FaCode, FaLightbulb } from "react-icons/fa";
 
-const About = () => {
+export default function About() {
   return (
-    <section
-      id="about"
-      className="max-w-screen-2xl mx-auto px-4 md:px-20 py-16"
-    >
-      {/* ===== Title ===== */}
-      <h1 className="text-4xl font-bold text-center mb-12">
-        About <span className="text-green-600">Me</span>
-      </h1>
-
-      {/* ===== Intro Card ===== */}
-      <div className="bg-white border border-[#ccc] shadow-sm rounded-2xl p-8 mb-10">
-        <p className="text-gray-700 leading-relaxed text-lg">
-          I'm a Computer Science & Engineering graduate and a passionate
-          Java Developer with a strong interest in building scalable,
-          efficient, and secure backend applications. I have solid
-          knowledge of Core Java, Object-Oriented Programming (OOP),
-          Data Structures, and database-driven application development.
-          Along with backend technologies, I also have experience in
-          frontend development using modern web technologies.
-          <br /><br />
-          I enjoy solving real-world problems through clean, maintainable
-          code and continuously learning new tools and frameworks to
-          enhance my development skills.
-        </p>
-      </div>
-
-      {/* ===== Grid Sections ===== */}
-      <div className="grid md:grid-cols-2 gap-8">
-
-        {/* ===== Education ===== */}
-        <div className="bg-white  border border-[#ccc] shadow rounded-2xl p-6 hover:shadow-xl transition">
-          <h2 className="text-xl font-semibold text-green-600 mb-3">
-            Education & Training
+    <section id="about" className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Section Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900">
+            About <span className="text-green-600">Me</span>
           </h2>
-          <p className="text-gray-700">
-            Completed B.Tech in Computer Science & Engineering with a strong
-            foundation in programming, software development, and problem-solving.
-          </p>
+          <div className="w-16 h-1 bg-green-600 mx-auto mt-4 rounded"></div>
         </div>
 
-        {/* ===== Skills ===== */}
-        <div className="bg-white  border border-[#ccc] shadow rounded-2xl p-6 hover:shadow-xl transition">
-          <h2 className="text-xl font-semibold text-green-600 mb-3">
-            Skills & Expertise
-          </h2>
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-3 gap-8 items-stretch">
+          
+          {/* Card 1: Education & Background */}
+          <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300 border border-gray-100 flex flex-col">
+            <div className="text-green-600 text-3xl mb-4">
+              <FaGraduationCap />
+            </div>
+            <h3 className="text-xl font-bold text-gray-800 mb-3">Background</h3>
+            <p className="text-gray-600 leading-relaxed flex-grow">
+              I am a Computer Science & Engineering graduate with a strong 
+              academic foundation in software engineering principles, system design, 
+              and lifecycle management.
+            </p>
+          </div>
 
-          <ul className="list-disc ml-5 space-y-2 text-gray-700">
-            <li>Core Java & Object-Oriented Programming (OOP)</li>
-            <li>Spring Framework, Hibernate & JDBC</li>
-            <li>SQL & Database Management</li>
-            <li>RESTful API Development</li>
-            <li>HTML, CSS, JavaScript, React.js</li>
-            <li>Data Structures & Algorithms</li>
-            <li>Git & GitHub</li>
-          </ul>
+          {/* Card 2: Core Expertise */}
+          <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300 border border-gray-100 flex flex-col">
+            <div className="text-red-600 text-3xl mb-4">
+              <FaCode />
+            </div>
+            <h3 className="text-xl font-bold text-gray-800 mb-3">Expertise</h3>
+            <p className="text-gray-600 leading-relaxed flex-grow">
+              Specialized in building scalable backend architectures using Core & Advanced Java 
+              and Spring Boot. Proficient in database management (MySQL, MongoDB) and 
+              creating smooth frontend integrations.
+            </p>
+          </div>
+
+          {/* Card 3: Philosophy & Goals */}
+          <div className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition duration-300 border border-gray-100 flex flex-col">
+            <div className="text-yellow-500 text-3xl mb-4">
+              <FaLightbulb />
+            </div>
+            <h3 className="text-xl font-bold text-gray-800 mb-3">Mindset</h3>
+            <p className="text-gray-600 leading-relaxed flex-grow">
+              Driven by solving real-world challenges through highly clean, 
+              maintainable code. I love dissecting complex logic, understanding data structures, 
+              and continuously adopting modern ecosystem tools.
+            </p>
+          </div>
+
         </div>
 
-        {/* ===== Experience ===== */}
-        {/* <div className="bg-white shadow rounded-2xl p-6 hover:shadow-xl transition">
-          <h2 className="text-xl font-semibold text-green-600 mb-3">
-            Professional Experience
-          </h2>
-
-          <p className="font-medium">
-            Java Developer Intern — TechSaksham
+        {/* Brief Bottom Statement Summary */}
+        <div className="mt-12 max-w-4xl mx-auto text-center">
+          <p className="text-lg text-gray-700 italic bg-green-50 p-6 rounded-xl border-l-4 border-green-600">
+            "I focus on writing production-ready code today while constantly adapting to the architectures of tomorrow."
           </p>
-          <p className="text-sm text-gray-500 mb-2">
-            Duration: 1 Month
-          </p>
-
-          <ul className="list-disc ml-5 space-y-2 text-gray-700">
-            <li>Worked on Core Java, OOP, collections & exception handling</li>
-            <li>Built applications using JDBC & SQL</li>
-            <li>Hands-on experience with Spring & Hibernate</li>
-            <li>Improved debugging and clean coding practices</li>
-          </ul>
-        </div> */}
-        {/* ===== Experience ===== */}
-<div className="bg-white border border-[#ccc] shadow rounded-2xl p-6 hover:shadow-xl transition">
-  <h2 className="text-xl font-semibold text-green-600 mb-3">
-    Professional Experience
-  </h2>
-
-  {/* Java Internship */}
-  <p className="font-medium">
-    Java Developer Intern — TechSaksham
-  </p>
-  <p className="text-sm text-gray-500 mb-2">
-    Duration: 1 Month
-  </p>
-
-  <ul className="list-disc ml-5 space-y-2 text-gray-700 mb-4">
-    <li>Worked on Core Java, OOP, collections & exception handling</li>
-    <li>Built applications using JDBC & SQL</li>
-    <li>Hands-on experience with Spring & Hibernate</li>
-    <li>Improved debugging and clean coding practices</li>
-  </ul>
-
-  {/* PLC / SCADA Training */}
-  <p className="font-medium">
-    Industrial Automation Training — PLC & SCADA (Siemens)
-  </p>
-
-  <ul className="list-disc ml-5 space-y-2 text-gray-700">
-    <li>
-      Completed hands-on training in PLC programming using Siemens controllers
-    </li>
-
-    <li>
-      Worked with SCADA systems for monitoring and control of industrial processes
-    </li>
-
-    <li>
-      Gained understanding of industrial automation concepts and real-time systems
-    </li>
-
-    <li>
-      Learned basics of HMI configuration and process visualization
-    </li>
-  </ul>
-</div>
-
-
-        {/* ===== Achievements ===== */}
-        <div className="bg-white  border border-[#ccc] shadow rounded-2xl p-6 hover:shadow-xl transition">
-          <h2 className="text-xl font-semibold text-green-600 mb-3">
-            Achievements & Awards
-          </h2>
-
-          <ul className="list-disc ml-5 space-y-2 text-gray-700">
-            <li>Java Developer Certification</li>
-            <li>Blockchain Technology - Coursera </li>
-<li> Time Management and Ways of Thinking - LinkedIn Learning</li>
-<li> Entrepreneurship - LinkedIn Learning  </li>
-<li>Time and Stress Management - Saylor.org  </li>
-<li> Bitcoin for Everybody - Saylor.org  </li>
-            {/* </li> */}
-            <li>Finalist, Project Expo 2025 - Chandigarh University
-</li>
-            <li>Cleared Coding Bootcamp conducted by Chandigarh University</li>
-            
-          </ul>
         </div>
 
       </div>
     </section>
   );
-};
-
-export default About;
+}
