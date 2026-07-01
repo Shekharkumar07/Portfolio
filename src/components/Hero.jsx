@@ -55,9 +55,9 @@ export default function Hero() {
             Passionate and detail-oriented Java Full Stack Developer with
             hands-on experience in designing and developing scalable web
             applications using Java, Spring Boot, JavaScript, MySQL, and MongoDB. 
-            Skilled in developing RESTful APIs, implementing JWT Authentication, 
-            and creating responsive web interfaces. Strong foundation in Object-Oriented
-            Programming (OOP), SDLC, SQL, Git, GitHub, and Agile development
+            Skilled in developing robust RESTful APIs, writing clean code based on 
+            Object-Oriented Programming principles, and creating responsive web interfaces. 
+            Strong foundation in OOPs, SDLC, SQL, Git, GitHub, and Agile development
             practices. Passionate about learning modern technologies and
             building clean, scalable, production-ready applications.
           </p>
@@ -136,8 +136,8 @@ export default function Hero() {
             <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-purple-600 hover:text-white transition cursor-pointer">
               REST APIs
             </span>
-            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-indigo-600 hover:text-white transition cursor-pointer">
-              JWT Authentication
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-teal-600 hover:text-white transition cursor-pointer">
+              OOPs
             </span>
             <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-yellow-500 hover:text-white transition cursor-pointer">
               JavaScript
