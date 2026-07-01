@@ -6,23 +6,18 @@ import {
   FaGithub,
   FaLinkedin,
   FaInstagram,
-  FaReact,
   FaJava,
   FaJsSquare,
   FaGitAlt,
   FaHtml5,
   FaCss3Alt,
-  FaPython,
 } from "react-icons/fa";
 
 import {
   SiLeetcode,
   SiSpring,
-  SiHibernate,
   SiMysql,
   SiMongodb,
-  SiPostman,
-  SiJira,
 } from "react-icons/si";
 
 export default function Hero() {
@@ -46,7 +41,7 @@ export default function Hero() {
                 strings={[
                   "Java Full Stack Developer",
                   "Spring Boot Developer",
-                  "React Developer",
+                  "Backend Engineer",
                 ]}
                 typeSpeed={80}
                 backSpeed={50}
@@ -59,10 +54,9 @@ export default function Hero() {
           <p className="text-gray-700 mb-8 leading-relaxed">
             Passionate and detail-oriented Java Full Stack Developer with
             hands-on experience in designing and developing scalable web
-            applications using Java, Spring Boot, Hibernate, React.js,
-            JavaScript, MySQL, and MongoDB. Skilled in developing RESTful APIs,
-            implement JWT Authentication, and creating responsive,
-            user-friendly interfaces. Strong foundation in Object-Oriented
+            applications using Java, Spring Boot, JavaScript, MySQL, and MongoDB. 
+            Skilled in developing RESTful APIs, implementing JWT Authentication, 
+            and creating responsive web interfaces. Strong foundation in Object-Oriented
             Programming (OOP), SDLC, SQL, Git, GitHub, and Agile development
             practices. Passionate about learning modern technologies and
             building clean, scalable, production-ready applications.
@@ -117,7 +111,7 @@ export default function Hero() {
                 <SiSpring className="text-green-600 text-3xl" />
               </div>
               <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                <FaReact className="text-blue-500 text-3xl" />
+                <FaJsSquare className="text-yellow-500 text-3xl" />
               </div>
               <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
                 <SiMysql className="text-blue-600 text-3xl" />
@@ -128,25 +122,16 @@ export default function Hero() {
             </div>
           </div>
           
-          {/* ================= SKILLS ================= */}
+          {/* ================= 10 KEY SKILLS ================= */}
           <div className="flex flex-wrap gap-3">
             <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-red-600 hover:text-white transition cursor-pointer">
               Core Java
             </span>
-            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-red-700 hover:text-white transition cursor-pointer">
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-red-500 hover:text-white transition cursor-pointer">
+              Advanced Java
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-green-600 hover:text-white transition cursor-pointer">
               Spring Boot
-            </span>
-            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-yellow-600 hover:text-white transition cursor-pointer">
-              Hibernate
-            </span>
-            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-cyan-600 hover:text-white transition cursor-pointer">
-              React.js
-            </span>
-            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-yellow-500 hover:text-white transition cursor-pointer">
-              JavaScript
-            </span>
-            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-blue-700 hover:text-white transition cursor-pointer">
-              MySQL
             </span>
             <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-purple-600 hover:text-white transition cursor-pointer">
               REST APIs
@@ -154,14 +139,23 @@ export default function Hero() {
             <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-indigo-600 hover:text-white transition cursor-pointer">
               JWT Authentication
             </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-yellow-500 hover:text-white transition cursor-pointer">
+              JavaScript
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-orange-500 hover:text-white transition cursor-pointer">
+              HTML & CSS
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-blue-700 hover:text-white transition cursor-pointer">
+              MySQL
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-green-700 hover:text-white transition cursor-pointer">
+              MongoDB
+            </span>
             <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-orange-600 hover:text-white transition cursor-pointer">
               Git & GitHub
             </span>
-            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-green-700 hover:text-white transition cursor-pointer">
-              OOPs
-            </span>
           </div>
-        </div> {/* <--- FIXED: Added this missing closing tag for the left column */}
+        </div>
 
         {/* ================= RIGHT IMAGE ================= */}
         <div className="flex justify-center">
