@@ -34,9 +34,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
         {/* ================= LEFT SECTION ================= */}
-
         <div>
-
           <p className="text-2xl font-bold mb-2 text-gray-700">
             Welcome to My Portfolio 👋
           </p>
@@ -63,25 +61,18 @@ export default function Hero() {
             hands-on experience in designing and developing scalable web
             applications using Java, Spring Boot, Hibernate, React.js,
             JavaScript, MySQL, and MongoDB. Skilled in developing RESTful APIs,
-            implementing JWT Authentication, and creating responsive,
+            implement JWT Authentication, and creating responsive,
             user-friendly interfaces. Strong foundation in Object-Oriented
             Programming (OOP), SDLC, SQL, Git, GitHub, and Agile development
             practices. Passionate about learning modern technologies and
             building clean, scalable, production-ready applications.
           </p>
 
-          {/* ================= SOCIAL LINKS ================= */}
-
+          {/* ================= SOCIAL LINKS & TECH ================= */}
           <div className="flex flex-col md:flex-row md:justify-between gap-8 mb-8">
-
             <div>
-
-              <h3 className="font-semibold mb-3">
-                Available On
-              </h3>
-
+              <h3 className="font-semibold mb-3">Available On</h3>
               <div className="flex space-x-5 text-3xl">
-
                 <a
                   href="https://www.linkedin.com/in/shekharkumar14"
                   target="_blank"
@@ -90,7 +81,6 @@ export default function Hero() {
                 >
                   <FaLinkedin />
                 </a>
-
                 <a
                   href="https://github.com/Shekharkumar07"
                   target="_blank"
@@ -99,7 +89,6 @@ export default function Hero() {
                 >
                   <FaGithub />
                 </a>
-
                 <a
                   href="https://leetcode.com/u/Shekhar_kumar12345/"
                   target="_blank"
@@ -108,7 +97,6 @@ export default function Hero() {
                 >
                   <SiLeetcode />
                 </a>
-
                 <a
                   href="https://www.instagram.com/shekhar_prasad07/"
                   target="_blank"
@@ -117,95 +105,73 @@ export default function Hero() {
                 >
                   <FaInstagram />
                 </a>
-
               </div>
-
             </div>
 
             {/* ================= TECH ICONS ================= */}
-
-            <div className="flex space-x-4">
-
-  <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-    <FaJava className="text-red-600 text-3xl" />
-  </div>
-
-  <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-    <SiSpring className="text-green-600 text-3xl" />
-  </div>
-
-  <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-    <FaReact className="text-blue-500 text-3xl" />
-  </div>
-
-  <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-    <SiMysql className="text-blue-600 text-3xl" />
-  </div>
-
-  <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-    <FaGitAlt className="text-orange-600 text-3xl" />
-  </div>
-
-</div>
+            <div className="flex space-x-4 items-center">
+              <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+                <FaJava className="text-red-600 text-3xl" />
+              </div>
+              <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+                <SiSpring className="text-green-600 text-3xl" />
+              </div>
+              <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+                <FaReact className="text-blue-500 text-3xl" />
+              </div>
+              <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+                <SiMysql className="text-blue-600 text-3xl" />
+              </div>
+              <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+                <FaGitAlt className="text-orange-600 text-3xl" />
+              </div>
+            </div>
+          </div>
           
-                    {/* ================= SKILLS ================= */}
+          {/* ================= SKILLS ================= */}
+          <div className="flex flex-wrap gap-3">
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-red-600 hover:text-white transition cursor-pointer">
+              Core Java
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-red-700 hover:text-white transition cursor-pointer">
+              Spring Boot
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-yellow-600 hover:text-white transition cursor-pointer">
+              Hibernate
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-cyan-600 hover:text-white transition cursor-pointer">
+              React.js
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-yellow-500 hover:text-white transition cursor-pointer">
+              JavaScript
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-blue-700 hover:text-white transition cursor-pointer">
+              MySQL
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-purple-600 hover:text-white transition cursor-pointer">
+              REST APIs
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-indigo-600 hover:text-white transition cursor-pointer">
+              JWT Authentication
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-orange-600 hover:text-white transition cursor-pointer">
+              Git & GitHub
+            </span>
+            <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-green-700 hover:text-white transition cursor-pointer">
+              OOPs
+            </span>
+          </div>
+        </div> {/* <--- FIXED: Added this missing closing tag for the left column */}
 
-         <div className="flex flex-wrap gap-3">
-
-  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-red-600 hover:text-white transition">
-    Core Java
-  </span>
-
-  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-red-700 hover:text-white transition">
-    Spring Boot
-  </span>
-
-  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-yellow-600 hover:text-white transition">
-    Hibernate
-  </span>
-
-  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-cyan-600 hover:text-white transition">
-    React.js
-  </span>
-
-  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-yellow-500 hover:text-white transition">
-    JavaScript
-  </span>
-
-  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-blue-700 hover:text-white transition">
-    MySQL
-  </span>
-
-  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-purple-600 hover:text-white transition">
-    REST APIs
-  </span>
-
-  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-indigo-600 hover:text-white transition">
-    JWT Authentication
-  </span>
-
-  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-orange-600 hover:text-white transition">
-    Git & GitHub
-  </span>
-
-  <span className="px-3 py-1 bg-white rounded-full shadow hover:bg-green-700 hover:text-white transition">
-    OOPs
-  </span>
-
-</div>
         {/* ================= RIGHT IMAGE ================= */}
-
         <div className="flex justify-center">
-
           <div className="relative">
-
             {/* Open to Work Badge */}
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg z-10">
               Open to Work
             </div>
 
             <div className="overflow-hidden rounded-full">
-
               <img
                 src={profile}
                 alt="Shekhar Kumar"
@@ -223,11 +189,8 @@ export default function Hero() {
                   hover:rotate-2
                 "
               />
-
             </div>
-
           </div>
-
         </div>
 
       </div>
