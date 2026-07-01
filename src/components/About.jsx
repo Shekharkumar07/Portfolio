@@ -1,168 +1,195 @@
-import React from "react";
+import React, { useState } from "react";
 import { 
   FaGraduationCap, 
   FaCode, 
   FaBriefcase, 
-  FaAward 
+  FaAward, 
+  FaBookOpen, 
+  FaChevronRight 
 } from "react-icons/fa";
 
 export default function About() {
+  // Setup interactive tabs for high user engagement
+  const [activeTab, setActiveTab] = useState("experience");
+
+  const skillCategories = [
+    { name: "Core & Advanced Java", level: "90%" },
+    { name: "Spring Boot & REST APIs", level: "85%" },
+    { name: "Databases (MySQL & MongoDB)", level: "80%" },
+    { name: "JavaScript & Frontend Basics", level: "70%" },
+    { name: "Git, GitHub & Postman/Jira", level: "85%" },
+  ];
+
   return (
-    // Clean, tight padding to prevent large gaps above and below the section
-    <section id="about" className="pt-6 pb-12 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="about" className="pt-8 pb-16 bg-white transition-all duration-300">
+      <div className="max-w-6xl mx-auto px-6">
         
-        {/* ================= SECTION HEADING ================= */}
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-gray-900">
-            About <span className="text-green-600">Me</span>
+        {/* ================= PREMIUM SECTION HEADING ================= */}
+        <div className="text-center mb-10">
+          <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">
+            About <span className="text-green-600 relative inline-block">Me
+              <span className="absolute bottom-1 left-0 w-full h-1 bg-green-200 -z-10 transform scale-x-105"></span>
+            </span>
           </h2>
-          <div className="w-16 h-1 bg-green-600 mx-auto mt-2 rounded"></div>
+          <div className="w-12 h-1 bg-green-600 mx-auto mt-3 rounded-full"></div>
         </div>
 
-        {/* ================= PROFESSIONAL SUMMARY CARD ================= */}
-        <div className="max-w-5xl mx-auto bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm mb-10 text-center">
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-            Computer Science Engineering graduate with experience as a Backend Developer at Bursys Technologies, 
-            contributing to the FieldEquip enterprise SaaS platform. Skilled in Java, Spring Boot, REST APIs, MongoDB, 
-            and MySQL, with a strong foundation in SDLC and backend development. Passionate about building 
-            scalable, high-quality software and continuously enhancing technical expertise.
-          </p>
+        {/* ================= INTERACTIVE DYNAMIC TABS ================= */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10">
+          <button
+            onClick={() => setActiveTab("experience")}
+            className={`px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-300 flex items-center gap-2 shadow-sm ${
+              activeTab === "experience"
+                ? "bg-green-600 text-white shadow-green-200 shadow-md"
+                : "bg-gray-50 text-gray-600 hover:bg-gray-100 border border-gray-100"
+            }`}
+          >
+            <FaBriefcase className="text-base" /> Experience
+          </button>
+          <button
+            onClick={() => setActiveTab("education")}
+            className={`px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-300 flex items-center gap-2 shadow-sm ${
+              activeTab === "education"
+                ? "bg-green-600 text-white shadow-green-200 shadow-md"
+                : "bg-gray-50 text-gray-600 hover:bg-gray-100 border border-gray-100"
+            }`}
+          >
+            <FaGraduationCap className="text-base" /> Education & Training
+          </button>
+          <button
+            onClick={() => setActiveTab("skills")}
+            className={`px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-300 flex items-center gap-2 shadow-sm ${
+              activeTab === "skills"
+                ? "bg-green-600 text-white shadow-green-200 shadow-md"
+                : "bg-gray-50 text-gray-600 hover:bg-gray-100 border border-gray-100"
+            }`}
+          >
+            <FaCode className="text-base" /> Skills & Expertise
+          </button>
+          <button
+            onClick={() => setActiveTab("awards")}
+            className={`px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-300 flex items-center gap-2 shadow-sm ${
+              activeTab === "awards"
+                ? "bg-green-600 text-white shadow-green-200 shadow-md"
+                : "bg-gray-50 text-gray-600 hover:bg-gray-100 border border-gray-100"
+            }`}
+          >
+            <FaAward className="text-base" /> Achievements
+          </button>
         </div>
 
-        {/* ================= 2-COLUMN GRID FOR CONTENT ================= */}
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+        {/* ================= DYNAMIC TAB CONTENT AREA ================= */}
+        <div className="max-w-4xl mx-auto min-h-[380px] bg-gray-50/50 rounded-3xl p-6 md:p-8 border border-gray-100/80 backdrop-blur-sm shadow-inner transition-all duration-500">
           
-          {/* LEFT COLUMN: EDUCATION & TRAINING */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-3 border-b border-gray-200 pb-2">
-              <FaGraduationCap className="text-green-600 text-2xl" />
-              <h2 className="text-2xl font-bold text-gray-900">Education & Training</h2>
-            </div>
-
-            {/* University Card */}
-            <div className="bg-gray-50 p-5 rounded-xl border border-gray-100 shadow-sm">
-              <div className="flex justify-between items-start mb-2">
+          {/* TAB: EXPERIENCE */}
+          {activeTab === "experience" && (
+            <div className="animate-fadeIn">
+              <div className="flex flex-col md:flex-row justify-between items-start mb-6 gap-2">
                 <div>
-                  <h4 className="font-bold text-gray-800 text-base">Bachelor of Engineering</h4>
-                  <p className="text-green-600 font-semibold text-sm">Computer Science and Engineering</p>
-                  <p className="text-gray-500 text-xs mt-0.5">Chandigarh University, Punjab</p>
+                  <h3 className="text-2xl font-bold text-gray-800">Backend Developer</h3>
+                  <p className="text-green-600 font-semibold text-base mt-0.5">Bursys Technologies | FieldEquip</p>
                 </div>
-                <span className="text-xs font-bold bg-green-100 text-green-800 px-2 py-0.5 rounded">
-                  CGPA: 7.35
+                <span className="text-xs font-semibold bg-green-100 text-green-800 px-3 py-1 rounded-full shadow-sm">
+                  June 15, 2026 – Present
                 </span>
               </div>
-              <p className="text-gray-500 text-xs">Graduation: 2021-2025</p>
+              <div className="space-y-3">
+                {[
+                  "Developing and maintaining reliable backend microservices utilizing Java and Spring Boot ecosystems.",
+                  "Architecting RESTful APIs and translating business requirements into programmatic application logic.",
+                  "Integrating MongoDB document databases for efficient production data persistence and indexing retrieval.",
+                  "Debugging system issues and collaborating synchronously with cross-functional product delivery teams."
+                ].map((bullet, i) => (
+                  <div key={i} className="flex items-start gap-3 text-gray-600 text-sm leading-relaxed">
+                    <FaChevronRight className="text-green-500 text-xs mt-1.5 flex-shrink-0" />
+                    <p>{bullet}</p>
+                  </div>
+                ))}
+              </div>
             </div>
+          )}
 
-            {/* JSpiders Training Card */}
-            <div className="bg-gray-50 p-5 rounded-xl border border-gray-100 shadow-sm">
-              <div className="mb-2">
-                <h4 className="font-bold text-gray-800 text-base">Java Full Stack Development</h4>
-                <p className="text-green-600 font-semibold text-sm">JSpiders, Bengaluru</p>
-                <p className="text-gray-500 text-xs mt-0.5">Professional Training | 2025</p>
+          {/* TAB: EDUCATION & TRAINING */}
+          {activeTab === "education" && (
+            <div className="grid md:grid-cols-2 gap-6 animate-fadeIn">
+              {/* College Card */}
+              <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:border-green-500/30 transition-all duration-300">
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="font-bold text-gray-800 text-lg">Bachelor of Engineering</h4>
+                  <span className="text-xs font-bold bg-green-100 text-green-800 px-2 py-0.5 rounded-md">7.35 CGPA</span>
+                </div>
+                <p className="text-green-600 text-sm font-semibold">Computer Science and Engineering</p>
+                <p className="text-gray-500 text-xs mt-1">Chandigarh University, Punjab (2021-2025)</p>
               </div>
-              <ul className="list-disc pl-4 space-y-1 text-gray-600 text-xs leading-relaxed">
-                <li>Hands-on training in Java Full Stack Development following SDLC practices.</li>
-                <li>Core Java, JDBC, Servlets, JSP, Spring Boot, REST APIs.</li>
-                <li>HTML, CSS, JavaScript, SQL, and database integration.</li>
-              </ul>
-            </div>
-          </div>
 
-          {/* RIGHT COLUMN: SKILLS & EXPERTISE */}
-          <div className="space-y-6">
-            <div className="flex items-center space-x-3 border-b border-gray-200 pb-2">
-              <FaCode className="text-green-600 text-2xl" />
-              <h2 className="text-2xl font-bold text-gray-900">Skills & Expertise</h2>
+              {/* JSpiders Training Card */}
+              <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:border-green-500/30 transition-all duration-300">
+                <h4 className="font-bold text-gray-800 text-lg">Java Full Stack Development</h4>
+                <p className="text-green-600 text-sm font-semibold">JSpiders, Bengaluru</p>
+                <p className="text-gray-400 text-xs mt-1 mb-3">Professional Certificate Program | 2025</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {["Core Java", "Spring Boot", "REST APIs", "SQL", "JavaScript", "SDLC"].map((tech) => (
+                    <span key={tech} className="text-[10px] font-bold bg-gray-100 text-gray-600 px-2 py-0.5 rounded">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
+          )}
 
-            <div className="bg-gray-50 p-5 rounded-xl border border-gray-100 shadow-sm space-y-3">
-              <div>
-                <span className="text-xs font-bold text-green-700 block mb-1">Programming & Frontend</span>
-                <p className="text-gray-700 text-sm">Core Java, Advanced Java, JavaScript, Basic Python, HTML, CSS</p>
-              </div>
-              <div>
-                <span className="text-xs font-bold text-green-700 block mb-1">Backend Architectures</span>
-                <p className="text-gray-700 text-sm">Spring, Spring Boot, REST APIs, JWT Authentication</p>
-              </div>
-              <div>
-                <span className="text-xs font-bold text-green-700 block mb-1">Databases & Infrastructure</span>
-                <p className="text-gray-700 text-sm">MongoDB, MySQL, SQL, Git, GitHub</p>
-              </div>
-              <div>
-                <span className="text-xs font-bold text-green-700 block mb-1">Tools & Core Concepts</span>
-                <p className="text-gray-700 text-sm">Postman, Jira, OOPS, SDLC, Data Structures & Algorithms (Basics)</p>
+          {/* TAB: SKILLS */}
+          {activeTab === "skills" && (
+            <div className="space-y-5 animate-fadeIn">
+              <h4 className="text-lg font-bold text-gray-800 mb-2 flex items-center gap-2">
+                <FaBookOpen className="text-green-600 text-sm" /> Core Domain Proficiency
+              </h4>
+              <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+                {skillCategories.map((skill, index) => (
+                  <div key={index} className="space-y-1.5">
+                    <div className="flex justify-between text-xs font-semibold text-gray-700">
+                      <span>{skill.name}</span>
+                      <span className="text-green-600">{skill.level}</span>
+                    </div>
+                    <div className="w-full bg-gray-200 h-2 rounded-full overflow-hidden shadow-inner">
+                      <div 
+                        className="bg-gradient-to-r from-green-500 to-emerald-600 h-full rounded-full transition-all duration-1000 ease-out"
+                        style={{ width: skill.level }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
+          )}
+
+          {/* TAB: AWARDS */}
+          {activeTab === "awards" && (
+            <div className="grid sm:grid-cols-2 gap-4 animate-fadeIn">
+              {[
+                { title: "Java (Basic) Certification", desc: "HackerRank Verified Authority" },
+                { title: "Blockchain Technology Cert.", desc: "Coursera Global Specialization" },
+                { title: "Competitive Coding Bootcamps", desc: "Hackathon Finalist at Chandigarh University" },
+                { title: "Professional Development", desc: "Agile, Jira, & System Lifecycles" }
+              ].map((award, i) => (
+                <div key={i} className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex items-start gap-3 hover:scale-[1.02] transition duration-300">
+                  <span className="text-xl bg-yellow-50 p-2 rounded-lg text-yellow-500">🏆</span>
+                  <div>
+                    <h5 className="font-bold text-gray-800 text-sm">{award.title}</h5>
+                    <p className="text-gray-500 text-xs mt-0.5">{award.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
 
         </div>
 
-        {/* ================= PROFESSIONAL EXPERIENCE ================= */}
-        <div className="max-w-5xl mx-auto mt-12 mb-12">
-          <div className="flex items-center space-x-3 mb-6 border-b border-gray-200 pb-2">
-            <FaBriefcase className="text-green-600 text-2xl" />
-            <h2 className="text-2xl font-bold text-gray-900">Professional Experience</h2>
-          </div>
-
-          <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
-              <div>
-                <h3 className="text-xl font-bold text-gray-800">Backend Developer</h3>
-                <p className="text-green-600 font-semibold text-sm">Bursys Technologies | FieldEquip</p>
-              </div>
-              <span className="text-xs font-semibold bg-green-100 text-green-800 px-3 py-1 rounded-full mt-2 sm:mt-0">
-                June 15, 2026 – Present
-              </span>
-            </div>
-            
-            <ul className="list-disc pl-5 space-y-2 text-gray-600 text-sm leading-relaxed">
-              <li>Developing and maintaining backend services using Java and Spring Boot.</li>
-              <li>Building REST APIs and implementing business logic.</li>
-              <li>Working with MongoDB for data storage and retrieval.</li>
-              <li>Debugging issues and collaborating with cross-functional teams to deliver product features.</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* ================= ACHIEVEMENTS & AWARDS ================= */}
-        <div className="max-w-5xl mx-auto mt-6">
-          <div className="flex items-center space-x-3 mb-4 border-b border-gray-200 pb-2">
-            <FaAward className="text-green-600 text-2xl" />
-            <h2 className="text-2xl font-bold text-gray-900">Achievements & Awards</h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div className="bg-gray-50 p-4 rounded-xl border border-gray-100 shadow-sm flex items-start space-x-3">
-              <span className="text-yellow-500 mt-1">🏆</span>
-              <div>
-                <h4 className="font-semibold text-gray-800 text-sm">Java (Basic) Certification</h4>
-                <p className="text-gray-500 text-xs">HackerRank Verified Certification</p>
-              </div>
-            </div>
-            <div className="bg-gray-50 p-4 rounded-xl border border-gray-100 shadow-sm flex items-start space-x-3">
-              <span className="text-yellow-500 mt-1">🏆</span>
-              <div>
-                <h4 className="font-semibold text-gray-800 text-sm">Blockchain Technology Certificate</h4>
-                <p className="text-gray-500 text-xs">Coursera Global Specialization</p>
-              </div>
-            </div>
-            <div className="bg-gray-50 p-4 rounded-xl border border-gray-100 shadow-sm flex items-start space-x-3">
-              <span className="text-yellow-500 mt-1">🏆</span>
-              <div>
-                <h4 className="font-semibold text-gray-800 text-sm">Professional Development Milestones</h4>
-                <p className="text-gray-500 text-xs">Time Management & Entrepreneurship — LinkedIn Learning</p>
-              </div>
-            </div>
-            <div className="bg-gray-50 p-4 rounded-xl border border-gray-100 shadow-sm flex items-start space-x-3">
-              <span className="text-yellow-500 mt-1">🏆</span>
-              <div>
-                <h4 className="font-semibold text-gray-800 text-sm">Competitive Coding Bootcamps</h4>
-                <p className="text-gray-500 text-xs">Finalist in major Hackathons conducted at Chandigarh University</p>
-              </div>
-            </div>
-          </div>
+        {/* ================= HIGHLY STANDOUT BLOCKQUOTE ================= */}
+        <div className="max-w-4xl mx-auto mt-12 text-center">
+          <p className="text-base text-gray-700 italic bg-gradient-to-r from-green-50/50 via-emerald-50/20 to-white p-4 rounded-xl border-l-4 border-green-600 shadow-sm">
+            "I focus on writing structural, production-ready backend code today while constantly adapting to the enterprise system architectures of tomorrow."
+          </p>
         </div>
 
       </div>
