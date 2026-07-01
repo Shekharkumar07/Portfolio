@@ -3,15 +3,16 @@ import { FaGraduationCap, FaCode, FaLightbulb } from "react-icons/fa";
 
 export default function About() {
   return (
-    <section id="about" className="pt-10 pb-6 bg-white">
+    // -mt-10 md:-mt-16 actively pulls the section up to eliminate any empty gap
+    <section id="about" className="pt-0 pb-4 bg-white -mt-10 md:-mt-16 relative z-10">
       <div className="max-w-7xl mx-auto px-6">
         
-        {/* Section Heading (Reduced bottom margin from mb-16 to mb-8) */}
-        <div className="text-center mb-8">
+        {/* Section Heading (Tightly spaced) */}
+        <div className="text-center mb-6">
           <h2 className="text-4xl font-bold text-gray-900">
             About <span className="text-green-600">Me</span>
           </h2>
-          <div className="w-16 h-1 bg-green-600 mx-auto mt-3 rounded"></div>
+          <div className="w-16 h-1 bg-green-600 mx-auto mt-2 rounded"></div>
         </div>
 
         {/* Content Grid */}
@@ -58,9 +59,9 @@ export default function About() {
 
         </div>
 
-        {/* Brief Bottom Statement Summary (Reduced margin top from mt-12 to mt-8) */}
-        <div className="mt-8 max-w-4xl mx-auto text-center">
-          <p className="text-lg text-gray-700 italic bg-green-50 p-6 rounded-xl border-l-4 border-green-600">
+        {/* Brief Bottom Statement Summary (Tighter spacing top/bottom) */}
+        <div className="mt-6 max-w-4xl mx-auto text-center">
+          <p className="text-lg text-gray-700 italic bg-green-50 p-5 rounded-xl border-l-4 border-green-600">
             "I focus on writing production-ready code today while constantly adapting to the architectures of tomorrow."
           </p>
         </div>
