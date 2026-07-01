@@ -3,11 +3,11 @@ import { FaGraduationCap, FaCode, FaLightbulb } from "react-icons/fa";
 
 export default function About() {
   return (
-    // -mt-10 md:-mt-16 actively pulls the section up to eliminate any empty gap
-    <section id="about" className="pt-0 pb-4 bg-white -mt-10 md:-mt-16 relative z-10">
+    // Replaced negative margins with clean, minimal padding (pt-4 pb-4)
+    <section id="about" className="pt-4 pb-4 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         
-        {/* Section Heading (Tightly spaced) */}
+        {/* Section Heading (Tight spacing) */}
         <div className="text-center mb-6">
           <h2 className="text-4xl font-bold text-gray-900">
             About <span className="text-green-600">Me</span>
