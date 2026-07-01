@@ -9,8 +9,6 @@ import {
   FaJava,
   FaJsSquare,
   FaGitAlt,
-  FaHtml5,
-  FaCss3Alt,
 } from "react-icons/fa";
 
 import {
@@ -29,28 +27,28 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
         {/* ================= LEFT SECTION ================= */}
-        <div>
+        <div className="w-full">
           <p className="text-2xl font-bold mb-2 text-gray-700">
             Welcome to My Portfolio 👋
           </p>
 
-         {/* Keeps "I am" and your typing effect locked on one line forever */}
-<h1 className="text-xl sm:text-3xl md:text-5xl font-bold mb-4 whitespace-nowrap overflow-visible block">
-  <span>I am</span>{" "}
-  <span className="text-red-600 inline">
-    <ReactTyped
-      strings={[
-        "Java Full Stack Developer",
-        "Spring Boot Developer",
-        "Backend Engineer",
-      ]}
-      typeSpeed={80}
-      backSpeed={50}
-      backDelay={1500}
-      loop
-    />
-  </span>
-</h1>
+          {/* Single-line layout configuration with responsive fluid sizing */}
+          <h1 className="text-xl sm:text-3xl md:text-5xl font-bold mb-4 whitespace-nowrap overflow-visible block">
+            <span>I am</span>{" "}
+            <span className="text-red-600 inline">
+              <ReactTyped
+                strings={[
+                  "Java Full Stack Developer",
+                  "Spring Boot Developer",
+                  "Backend Engineer",
+                ]}
+                typeSpeed={80}
+                backSpeed={50}
+                backDelay={1500}
+                loop
+              />
+            </span>
+          </h1>
 
           <p className="text-gray-700 mb-8 leading-relaxed">
             Passionate and detail-oriented Java Full Stack Developer with
@@ -62,90 +60,71 @@ export default function Hero() {
             practices. Passionate about learning modern technologies and
             building clean, scalable, production-ready applications.
           </p>
-          
-{/* ================= SOCIAL LINKS & TECH ================= */}
-<div className="flex flex-col md:flex-row md:justify-between gap-8 mb-8">
-  
-  {/* Left: Social Media Links */}
-  <div>
-    <h3 className="font-semibold mb-3 text-gray-800">Available On</h3>
-    <div className="flex space-x-5 text-3xl text-gray-700">
-      <a
-        href="https://www.linkedin.com/in/shekharkumar14"
-        target="_blank"
-        rel="noreferrer"
-        className="hover:text-blue-600 transition"
-      >
-        <FaLinkedin />
-      </a>
-      <a
-        href="https://github.com/Shekharkumar07"
-        target="_blank"
-        rel="noreferrer"
-        className="hover:text-black transition"
-      >
-        <FaGithub />
-      </a>
-      <a
-        href="https://leetcode.com/u/Shekhar_kumar12345/"
-        target="_blank"
-        rel="noreferrer"
-        className="hover:text-yellow-500 transition"
-      >
-        <SiLeetcode />
-      </a>
-      <a
-        href="https://www.instagram.com/shekhar_prasad07/"
-        target="_blank"
-        rel="noreferrer"
-        className="hover:text-pink-500 transition"
-      >
-        <FaInstagram />
-      </a>
-    </div>
-  </div>
 
-  {/* Right: Tech Stack Wrapper */}
-  <div className="flex flex-col">
-    <h3 className="font-semibold mb-3 text-gray-800">Tech Stack</h3>
-    <div className="flex space-x-4 items-center">
-      <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-        <FaJava className="text-red-600 text-3xl" />
-      </div>
-      <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-        <SiSpring className="text-green-600 text-3xl" />
-      </div>
-      <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-        <FaJsSquare className="text-yellow-500 text-3xl" />
-      </div>
-      <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-        <SiMysql className="text-blue-600 text-3xl" />
-      </div>
-      <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-        <FaGitAlt className="text-orange-600 text-3xl" />
-      </div>
-    </div>
-  </div>
-
-</div>
-            {/* ================= TECH ICONS ================= */}
-            <div className="flex space-x-4 items-center">
-              <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                <FaJava className="text-red-600 text-3xl" />
-              </div>
-              <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                <SiSpring className="text-green-600 text-3xl" />
-              </div>
-              <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                <FaJsSquare className="text-yellow-500 text-3xl" />
-              </div>
-              <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                <SiMysql className="text-blue-600 text-3xl" />
-              </div>
-              <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
-                <FaGitAlt className="text-orange-600 text-3xl" />
+          {/* ================= SOCIAL LINKS & TECH ================= */}
+          <div className="flex flex-col md:flex-row md:justify-between gap-8 mb-8">
+            
+            {/* Left Column: Socials */}
+            <div>
+              <h3 className="font-semibold mb-3 text-gray-800">Available On</h3>
+              <div className="flex space-x-5 text-3xl text-gray-700">
+                <a
+                  href="https://www.linkedin.com/in/shekharkumar14"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-blue-600 transition"
+                >
+                  <FaLinkedin />
+                </a>
+                <a
+                  href="https://github.com/Shekharkumar07"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-black transition"
+                >
+                  <FaGithub />
+                </a>
+                <a
+                  href="https://leetcode.com/u/Shekhar_kumar12345/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-yellow-500 transition"
+                >
+                  <SiLeetcode />
+                </a>
+                <a
+                  href="https://www.instagram.com/shekhar_prasad07/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-pink-500 transition"
+                >
+                  <FaInstagram />
+                </a>
               </div>
             </div>
+
+            {/* Right Column: Tech Stack Header with Logos Stacked underneath */}
+            <div className="flex flex-col">
+              <h3 className="font-semibold mb-3 text-gray-800">Tech Stack</h3>
+              <div className="flex space-x-4 items-center">
+                <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+                  <FaJava className="text-red-600 text-3xl" />
+                </div>
+                <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+                  <SiSpring className="text-green-600 text-3xl" />
+                </div>
+                <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+                  <FaJsSquare className="text-yellow-500 text-3xl" />
+                </div>
+                <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+                  <SiMysql className="text-blue-600 text-3xl" />
+                </div>
+                <div className="w-14 h-14 flex items-center justify-center bg-white rounded-full shadow hover:scale-110 transition">
+                  <FaGitAlt className="text-orange-600 text-3xl" />
+                </div>
+              </div>
+            </div>
+
           </div>
           
           {/* ================= 10 KEY SKILLS ================= */}
