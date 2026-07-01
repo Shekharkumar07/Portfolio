@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../assets/image.png";
+import profile from "../data/image.png";
 import { ReactTyped } from "react-typed";
 import {
   FaGithub,
