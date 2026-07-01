@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-// import profile from "../assets/profile.jpg";
+// import profile from "../data/image.png";
 import profile from "../assets/image.png"
 
 export default function Navbar() {
