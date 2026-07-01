@@ -62,9 +62,8 @@ export default function Hero() {
             practices. Passionate about learning modern technologies and
             building clean, scalable, production-ready applications.
           </p>
-
-          {/* ================= SOCIAL LINKS & TECH ================= */}
-        {/* ================= SOCIAL LINKS & TECH ================= */}
+          
+{/* ================= SOCIAL LINKS & TECH ================= */}
 <div className="flex flex-col md:flex-row md:justify-between gap-8 mb-8">
   
   {/* Left: Social Media Links */}
